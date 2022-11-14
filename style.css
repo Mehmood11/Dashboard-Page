@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: #222222;
+}
+.main-container .top-line-chart {
+  padding: 20px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #302f2f;
+}
+.bottom-charts {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.bottom-charts .inner-bottom-charts {
+  width: 500px;
+  height: 100%;
+  background-color: #302f2f;
+  margin: 5px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  padding: 10px;
+}
+.progress-div {
+  height: 360px !important;
+}
+.inner-progress-div1,
+.inner-progress-div2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+}
+.inner-progress-div1 img,
+.inner-progress-div2 img {
+  width: 70px;
+}
+.doghnut-div {
+  width: 400px;
+}
+.battery-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  background-color: transparent !important;
+}
+.battery-div p {
+  font-size: 25px;
+  margin: 6px;
+}
+.battery-div h1 {
+  margin: 0;
+  font-size: 80px;
+  color: #7ed957;
+}
+.inner-battery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #302f2f;
+  width: 100%;
+  border-radius: 20px;
+  padding: 15px 6px;
+}
+
+.inner-battery .main-battery {
+  border: 3px solid black;
+  width: 35px;
+  margin-left:4px;
+  padding: 5px;
+  border-radius: 10px;
+  position: relative;
+}
+.inner-battery .main-battery::before {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 5px;
+  background-color: black;
+  top: -10px;
+  left: 20%;
+}
+.battery-stages {
+  margin-top: 2px;
+  height: 4px;
+}
+.higher-litres {
+  background-color: green;
+}
+.lowStages {
+  background-color: red;
+}
+.mediumStages {
+  background-color: orange;
+}
+
+.canvas-div {
+  width: 400px;
+}
+.inner-doughnut-div {
+  width: 450px;
+}
+
+/* // Responsines */
+
+@media screen and (max-width: 1290px) {
+  .bottom-charts {
+    flex-wrap: wrap;
+  }
+  .doghnut-div {
+    display: flex;
+    justify-content: center;
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 1060px) {
+  .battery-div {
+    width: 400px !important;
+  }
+}
+@media screen and (max-width: 960px) {
+  .battery-div,
+  .progress-div {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .canvas-div,
+  .inner-doughnut-div {
+    width: 300px !important;
+  }
+  #myChart {
+    height: 150px !important;
+  }
+}
+@media screen and (max-width: 430px) {
+  .canvas-div,
+  .inner-doughnut-div {
+    width: 230px !important;
+  }
+}

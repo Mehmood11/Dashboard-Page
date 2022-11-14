@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="top-line-chart">
+        <canvas id="myChart" height="70"> </canvas>
+      </div>
+      <div class="bottom-charts">
+        <div class="progress-div inner-bottom-charts">
+          <div class="inner-progress-div1">
+            <img src="./images/therma.svg" />
+            <div class="canvas-div">
+              <canvas id="myChart2" height="70"> </canvas>
+            </div>
+          </div>
+          <div class="inner-progress-div1">
+            <img src="./images/water.svg" />
+            <div class="canvas-div">
+              <canvas id="myChart3" height="70"> </canvas>
+            </div>
+          </div>
+        </div>
+        <div class="battery-div inner-bottom-charts">
+          <p>Estimated Water Saving</p>
+          <h1 id="main-water-litres">550</h1>
+          <p>Leters</p>
+
+          <div class="inner-battery">
+            <div class="main-battery">
+              <div class="battery-stages higher-litre3"></div>
+              <div class="battery-stages higher-litre2 higher-litre3"></div>
+              <div class="battery-stages higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages medium-litre medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages low-litre3 medium-litre medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages low-litre2 low-litre3 medium-litre medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages low-litre low-litre2 low-litre3 medium-litre medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+            </div>
+            <div class="main-battery">
+              <div class="battery-stages higher-litre3"></div>
+              <div class="battery-stages higher-litre2 higher-litre3"></div>
+              <div class="battery-stages higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages medium-litre medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages low-litre3 medium-litre medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages low-litre2 low-litre3 medium-litre medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages low-litre low-litre2 low-litre3 medium-litre medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+            </div>
+            <div class="main-battery">
+              <div class="battery-stages higher-litre3"></div>
+              <div class="battery-stages higher-litre2 higher-litre3"></div>
+              <div class="battery-stages higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages medium-litre medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages low-litre3 medium-litre medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages low-litre2 low-litre3 medium-litre medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages low-litre low-litre2 low-litre3 medium-litre medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+            </div>
+            <div class="main-battery">
+              <div class="battery-stages higher-litre3"></div>
+              <div class="battery-stages higher-litre2 higher-litre3"></div>
+              <div class="battery-stages higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages medium-litre medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages low-litre3 medium-litre medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages low-litre2 low-litre3 medium-litre medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages low-litre low-litre2 low-litre3 medium-litre medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+            </div>
+            <div class="main-battery">
+              <div class="battery-stages higher-litre3"></div>
+              <div class="battery-stages higher-litre2 higher-litre3"></div>
+              <div class="battery-stages higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages medium-litre medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages low-litre3 medium-litre medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages low-litre2 low-litre3 medium-litre medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages low-litre low-litre2 low-litre3 medium-litre medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+            </div>
+            <div class="main-battery">
+              <div class="battery-stages higher-litre3"></div>
+              <div class="battery-stages higher-litre2 higher-litre3"></div>
+              <div class="battery-stages higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages medium-litre medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages low-litre3 medium-litre medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages low-litre2 low-litre3 medium-litre medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+              <div class="battery-stages low-litre low-litre2 low-litre3 medium-litre medium-litre2 medium-litre3 medium-litre4 higher-litre higher-litre2 higher-litre3"></div>
+            </div>
+           
+          </div>
+        </div>
+        <div class="doghnut-div inner-bottom-charts">
+          <div class="inner-doughnut-div">
+            <canvas id="mydoughnutChart"> </canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="style.js"></script>
+  </body>
+</html>
