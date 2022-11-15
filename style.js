@@ -230,7 +230,6 @@ const doughnutText = {
       ctx,
       chartArea: { left, right, top, bottom, width, height },
     } = chart;
-    console.log(left + 2);
     ctx.save();
     ctx.font = "bolder 20px Arial";
     ctx.fillStyle = "#ffffff";
@@ -295,61 +294,67 @@ const mydoughnutChart = new Chart(
 );
 
 ////////// For Battery (Water Litres)
+const forBattery1 = 600;
+const forBattery2 = 200;
+const forBattery3 = 800;
+const forBattery4 = 400;
+const forBattery5 = 200;
+const forBattery6 = 200;
 
-const waterLitres = document.getElementById("main-water-litres");
-const batteryStages = document.getElementsByClassName("battery-stages");
-const lowStages = document.getElementsByClassName("low-litre");
-const lowStages2 = document.getElementsByClassName("low-litre2");
-const lowStages3 = document.getElementsByClassName("low-litre3");
-const mediumStages = document.getElementsByClassName("medium-litre");
-const mediumStages2 = document.getElementsByClassName("medium-litre2");
-const mediumStages3 = document.getElementsByClassName("medium-litre3");
-const mediumStages4 = document.getElementsByClassName("medium-litre4");
-const higherLitre = document.getElementsByClassName("higher-litre");
-const higherLitre2 = document.getElementsByClassName("higher-litre2");
-const higherLitre3 = document.getElementsByClassName("higher-litre3");
+const batteryStages1 = document.getElementById("main-battery1").children;
+const batteryStages2 = document.getElementById("main-battery2").children;
+const batteryStages3 = document.getElementById("main-battery3").children;
+const batteryStages4 = document.getElementById("main-battery4").children;
+const batteryStages5 = document.getElementById("main-battery5").children;
+const batteryStages6 = document.getElementById("main-battery6").children;
 
-console.log(batteryStages);
-if (waterLitres.textContent <= 100) {
-  // lowStages.classList.add("lowStages");
-  for (let index = 0; index < lowStages.length; index++) {
-    lowStages[index].classList.add("lowStages");
+const batteryFuntion = (value, batteryStages) => {
+  if (value <= 100) {
+    for (let index = 0; index < 1; index++) {
+      batteryStages[index].classList.add("lowStages");
+    }
+  } else if (value <= 200) {
+    for (let index = 0; index < 2; index++) {
+      batteryStages[index].classList.add("lowStages");
+    }
+  } else if (value <= 300) {
+    for (let index = 0; index < 3; index++) {
+      batteryStages[index].classList.add("lowStages");
+    }
+  } else if (value <= 400) {
+    for (let index = 0; index < 4; index++) {
+      batteryStages[index].classList.add("mediumStages");
+    }
+  } else if (value <= 500) {
+    for (let index = 0; index < 5; index++) {
+     batteryStages[index].classList.add("mediumStages");
+    }
+  } else if (value <= 600) {
+    for (let index = 0; index < 6; index++) {
+       batteryStages[index].classList.add("mediumStages");
+    }
+  } else if (value <= 700) {
+    for (let index = 0; index < 7; index++) {
+      batteryStages[index].classList.add("mediumStages");
+    }
+  } else if (value <= 800) {
+    for (let index = 0; index < 8; index++) {
+     batteryStages[index].classList.add("higher-litres");
+    }
+  } else if (value <= 900) {
+    for (let index = 0; index < 9; index++) {
+     batteryStages[index].classList.add("higher-litres");
+    }
+  } else {
+    for (let index = 0; index < 10; index++) {
+       batteryStages[index].classList.add("higher-litres");
+    }
   }
-} else if (waterLitres.textContent <= 200) {
-  for (let index = 0; index < lowStages2.length; index++) {
-    lowStages2[index].classList.add("lowStages");
-  }
-} else if (waterLitres.textContent <= 300) {
-  for (let index = 0; index < lowStages3.length; index++) {
-    lowStages3[index].classList.add("lowStages");
-  }
-} else if (waterLitres.textContent <= 400) {
-  for (let index = 0; index < mediumStages.length; index++) {
-    mediumStages[index].classList.add("mediumStages");
-  }
-} else if (waterLitres.textContent <= 500) {
-  for (let index = 0; index < mediumStages2.length; index++) {
-    mediumStages2[index].classList.add("mediumStages");
-  }
-} else if (waterLitres.textContent <= 600) {
-  for (let index = 0; index < mediumStages3.length; index++) {
-    mediumStages3[index].classList.add("mediumStages");
-  }
-} else if (waterLitres.textContent <= 700) {
-  for (let index = 0; index < mediumStages4.length; index++) {
-    mediumStages4[index].classList.add("mediumStages");
-  }
-} else if (waterLitres.textContent <= 800) {
-  for (let index = 0; index < higherLitre.length; index++) {
-    higherLitre[index].classList.add("higher-litres");
-  }
-} else if (waterLitres.textContent <= 900) {
-  for (let index = 0; index < higherLitre2.length; index++) {
-    higherLitre2[index].classList.add("higher-litres");
-  }
-} else {
-  for (let index = 0; index < higherLitre3.length; index++) {
-    higherLitre3[index].classList.add("higher-litres");
-  }
-  // console.log("dsdsdsdsdsd");
-}
+};
+
+batteryFuntion(forBattery1, batteryStages1);
+batteryFuntion(forBattery2, batteryStages2);
+batteryFuntion(forBattery3, batteryStages3);
+batteryFuntion(forBattery4, batteryStages4);
+batteryFuntion(forBattery5, batteryStages5);
+batteryFuntion(forBattery6, batteryStages6);
