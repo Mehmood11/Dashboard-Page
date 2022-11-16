@@ -295,11 +295,11 @@ const mydoughnutChart = new Chart(
 
 ////////// For Battery (Water Litres)
 const forBattery1 = 600;
-const forBattery2 = 200;
+const forBattery2 = 300;
 const forBattery3 = 800;
 const forBattery4 = 400;
-const forBattery5 = 200;
-const forBattery6 = 200;
+const forBattery5 = 300;
+const forBattery6 = 1000;
 
 const batteryStages1 = document.getElementById("main-battery1").children;
 const batteryStages2 = document.getElementById("main-battery2").children;
